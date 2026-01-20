@@ -35,7 +35,7 @@ const Section1 = () => {
                     <div className="max-w-2xl w-full space-y-4 md:space-y-6 lg:space-y-8">
                         {/* Heading */}
                         <h1
-                            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold uppercase ${companyThemes.ArthTechSolution.theme.gradientText} text-center lg:text-left leading-tight`}
+                            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase ${companyThemes.ArthTechSolution.theme.gradientText} text-center lg:text-left leading-tight`}
                         >
                             {companyThemes.ArthTechSolution.name}
                         </h1>
@@ -83,16 +83,11 @@ const Section1 = () => {
                             </p>
 
                             <p className="text-xs sm:text-sm md:text-base opacity-90">
-                                We are a trusted leader in EPC (Engineering,
-                                Procurement, and Construction), providing fully
-                                integrated, end-to-end solar power solutions. We
-                                specialize in designing, engineering, and
-                                delivering high-performance turnkey systems
-                                tailored to meet your unique energy
-                                requirements. Guided by innovation and a strong
-                                commitment to sustainability, we're not just
-                                installing solar—we're empowering a brighter,
-                                greener future, one project at a time.
+                                We are a trusted EPC provider delivering
+                                end-to-end solar solutions. Specializing in
+                                high-performance turnkey systems, we combine
+                                innovation and sustainability to power a
+                                brighter, greener future
                             </p>
                         </div>
 
@@ -136,7 +131,7 @@ const Section1 = () => {
                         alt="Solar Panel"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
-                    
+
                     {/* Gradient overlay for better text contrast if needed */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-black/20 lg:to-transparent"></div>
 
@@ -152,7 +147,6 @@ const Section1 = () => {
                                 alt={`${companyThemes.ArthTechSolution.name} Logo`}
                                 // className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-38 lg:h-38 object-contain rounded-full"
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
-
                             />
                         </div>
                     </div>
