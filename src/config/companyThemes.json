@@ -1,9 +1,14 @@
 {
     "suryadoot": {
         "name": "Suryadoot Energy Solution",
-        "logo": "/suryadoot-logo.jpg",
+        "logo": "/suryadootimg/suryadoot-logo.jpg",
         "email": "himanshu546717@gmail.com",
         "phone": "8989933932",
+        "bgimg1": "/suryadootimg/suryadootimg1.jpg",
+        "bgimg2": "/suryadootimg/suryadootimg2.jpg",
+        "bgimg3": "/suryadootimg/suryadootimg3.jpg",
+        "bgimg4": "/suryadootimg/suryadootimg4.jpeg",
+        "bgimg5": "/suryadootimg/suryadootimg5.jpg",
 
         "theme": {
             "primary": "text-orange-500",
@@ -12,24 +17,82 @@
             "bg": "bg-sky-50",
             "text": "text-black",
             "overlay": "bg-black/50",
-            "logoBg": "bg-black"
+            "logoBg": "bg-black",
+            "navbarbgcolor": "bg-sky-50",
+            "navbarcloseicon": "text-gray-800",
+            "navmenubgcolor": "bg-white"
         }
     },
-
     "vkenergy": {
-        "name": "v k energy",
-        "logo": "/vklogo.png",
+        "name": "V K Energy",
+        "logo": "/vkenergyimg/vklogo.png",
         "email": "viplavkaithwas@gmail.com",
         "phone": "7000609749",
-
+        "bgimg1": "/vkenergyimg/vkeneryimg1.jpg",
+        "bgimg2": "/vkenergyimg/vkeneryimg2.jpg",
+        "bgimg3": "/vkenergyimg/vkeneryimg3.jpg",
+        "bgimg4": "/vkenergyimg/vkeneryimg4.jpg",
+        "bgimg5": "/vkenergyimg/vkeneryimg5.jpg",
         "theme": {
-            "primary": "text-blue-600",
-            "secondary": "text-emerald-500",
-             "gradientText": "text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-600",
-            "bg": "bg-blue-50",
-            "text": "text-gray-800",
-            "overlay": "bg-green-900/60",
-            "logoBg": "bg-blue-200"
+            "primary": "text-blue-700",
+            "secondary": "text-teal-500",
+            "gradientText": "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400",
+            "bg": "bg-sky-50",
+            "text": "text-slate-800",
+            "overlay": "bg-slate-900/60",
+            "logoBg": "bg-blue-100",
+            "imagebgcolor": "bg-amber-50",
+            "navbarbgcolor": "bg-[#ffffff] backdrop-blur",
+            "navbarcloseicon": "text-gray-700",
+            "navmenubgcolor": "bg-black",
+            "menutextcolor" : "text-white"
+        }
+    },
+    "goodlucktechnologies": {
+        "name": "Goodluck Technologies",
+        "logo": "/goodluckimg/goodlucktechnologies.png",
+        "email": "",
+        "phone": "7047227777",
+        "bgimg1": "/goodluckimg/goodluckimg1.jpg",
+        "bgimg2": "/goodluckimg/goodluckimg2.png",
+        "bgimg3": "/goodluckimg/goodluckimg3.jpg",
+        "bgimg4": "/goodluckimg/goodluckimg4.jpg",
+        "bgimg5": "/goodluckimg/goodluckimg5.jpg",
+        "theme": {
+            "primary": "text-sky-400",
+            "secondary": "text-emerald-400",
+            "gradientText": "text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400",
+            "bg": "bg-gray-900",
+            "text": "text-gray-100",
+            "overlay": "bg-gradient-to-br from-sky-900/40 to-emerald-900/40",
+            "logoBg": "bg-gray-800",
+            "navbarbgcolor": "bg-gray-900/100 backdrop-blur",
+            "navbarcloseicon": "text-gray-700",
+            "navmenubgcolor": "bg-black"
+        }
+    },
+    "ArthTechSolution": {
+        "name": "Arth Tech Solution",
+        "logo": "/arthimg/ArthTechSolution.png",
+        "email": "arthtech.solution@gmail.com",
+        "phone": "9098110210",
+        "bgimg1": "/arthimg/arttechimg1.jpg",
+        "bgimg2": "/arthimg/arttechimg2.jpg",
+        "bgimg3": "/arthimg/arttechimg3.jpg",
+        "bgimg4": "/arthimg/arttechimg4.jpg",
+        "bgimg5": "/arthimg/arttechimg5.jpg",
+        "theme": {
+            "primary": "text-rose-600",
+            "secondary": "text-purple-600",
+            "gradientText": "text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600",
+            "bg": "bg-gradient-to-br from-rose-100 via-pink-100 to-purple-100",
+            "text": "text-gray-900",
+            "overlay": "bg-gradient-to-br from-rose-900/30 to-purple-900/30",
+            "logoBg": "bg-gradient-to-r from-rose-400 to-purple-500 shadow-lg",
+            "navbarbgcolor": "bg-white/85 backdrop-blur-md",
+            "navbarcloseicon": "text-gray-800",
+            "navmenubgcolor": "bg-white/95 backdrop-blur-md",
+            "imagebgcolor": "bg-amber-50"
         }
     }
 }
