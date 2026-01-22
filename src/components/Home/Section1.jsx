@@ -9,8 +9,8 @@ const Section1 = () => {
         AOS.init({ duration: 1000 });
     }, []);
 
-    const phone = companyThemes?.ArthTechSolution?.phone;
-    const email = companyThemes?.ArthTechSolution?.email;
+    const phone = companyThemes?.goodlucktechnologies?.phone;
+    const email = companyThemes?.goodlucktechnologies?.email;
 
     const isMobile =
         typeof navigator !== "undefined" &&
@@ -29,15 +29,15 @@ const Section1 = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
                 {/* LEFT SIDE - Content (Order: 1) */}
                 <div
-                    className={`${companyThemes.ArthTechSolution.theme.bg} ${companyThemes.ArthTechSolution.theme.text} flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-16 order-2 lg:order-1`}
+                    className={`${companyThemes.goodlucktechnologies.theme.bg} ${companyThemes.goodlucktechnologies.theme.text} flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-16 order-2 lg:order-1`}
                     data-aos="fade-up"
                 >
                     <div className="max-w-2xl w-full space-y-4 md:space-y-6 lg:space-y-8">
                         {/* Heading */}
                         <h1
-                            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase ${companyThemes.ArthTechSolution.theme.gradientText} text-center lg:text-left leading-tight`}
+                            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase ${companyThemes.goodlucktechnologies.theme.gradientText} text-center lg:text-left leading-tight`}
                         >
-                            {companyThemes.ArthTechSolution.name}
+                            {companyThemes.goodlucktechnologies.name}
                         </h1>
 
                         {/* Paragraphs */}
@@ -45,9 +45,9 @@ const Section1 = () => {
                             <p>
                                 At{" "}
                                 <span
-                                    className={`font-semibold ${companyThemes.ArthTechSolution.theme.gradientText}`}
+                                    className={`font-semibold ${companyThemes.goodlucktechnologies.theme.gradientText}`}
                                 >
-                                    {companyThemes.ArthTechSolution.name}
+                                    {companyThemes.goodlucktechnologies.name}
                                 </span>
                                 , we're dedicated to powering a cleaner, greener
                                 tomorrow with turnkey solar solutions. From
@@ -74,9 +74,9 @@ const Section1 = () => {
                             <p>
                                 With{" "}
                                 <span
-                                    className={`${companyThemes.ArthTechSolution.theme.gradientText} font-bold`}
+                                    className={`${companyThemes.goodlucktechnologies.theme.gradientText} font-bold`}
                                 >
-                                    {companyThemes.ArthTechSolution.name}
+                                    {companyThemes.goodlucktechnologies.name}
                                 </span>
                                 , going solar is effortless, empowering, and
                                 truly sustainable.
@@ -101,7 +101,7 @@ const Section1 = () => {
                                             ? "noopener noreferrer"
                                             : undefined
                                     }
-                                    className={`${companyThemes.ArthTechSolution.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
+                                    className={`${companyThemes.goodlucktechnologies.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
                                 >
                                     <span>📧</span>
                                     <span className="break-all">{email}</span>
@@ -111,7 +111,7 @@ const Section1 = () => {
                             {phone && (
                                 <a
                                     href={phoneLink}
-                                    className={`${companyThemes.ArthTechSolution.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
+                                    className={`${companyThemes.goodlucktechnologies.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
                                 >
                                     <span>📞</span>
                                     <span>{phone}</span>
@@ -127,7 +127,7 @@ const Section1 = () => {
                     data-aos="zoom-out"
                 >
                     <img
-                        src={companyThemes?.ArthTechSolution?.bgimg1}
+                        src={companyThemes?.goodlucktechnologies?.bgimg1}
                         alt="Solar Panel"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
@@ -140,11 +140,11 @@ const Section1 = () => {
                         data-aos="fade-in"
                     >
                         <div
-                            className={`rounded-full overflow-hidden p-3 sm:p-4 md:p-5 lg:p-6 shadow-2xl ${companyThemes?.ArthTechSolution?.theme?.imagebgcolor} backdrop-blur-sm `}
+                            className={`rounded-full overflow-hidden p-3 sm:p-4 md:p-5 lg:p-6 shadow-2xl ${companyThemes?.goodlucktechnologies?.theme?.imagebgcolor} backdrop-blur-sm `}
                         >
                             <img
-                                src={companyThemes.ArthTechSolution.logo}
-                                alt={`${companyThemes.ArthTechSolution.name} Logo`}
+                                src={companyThemes.goodlucktechnologies.logo}
+                                alt={`${companyThemes.goodlucktechnologies.name} Logo`}
                                 // className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-38 lg:h-38 object-contain rounded-full"
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
                             />

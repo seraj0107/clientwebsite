@@ -2,7 +2,7 @@ import React from "react";
 import companyThemes from "../config/companyThemes.json";
 
 const Footer = () => {
-    const company = companyThemes?.ArthTechSolution;
+    const company = companyThemes?.goodlucktechnologies;
 
     const phone = company?.phone;
     const email = company?.email;

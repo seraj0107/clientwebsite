@@ -37,19 +37,23 @@ const Navbar = () => {
 
     return (
         <header
-            className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.ArthTechSolution?.theme?.text} shadow-lg ${companyThemes?.ArthTechSolution?.theme?.navbarbgcolor} backdrop-blur-sm `}
+            className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.goodlucktechnologies?.theme?.text} shadow-lg ${companyThemes?.goodlucktechnologies?.theme?.navbarbgcolor} backdrop-blur-sm `}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="flex-shrink-0 items-center">
+                {/* <Link to="/" className="flex-shrink-0 items-center"> */}
+                {/* </Link> */}
+                <a
+                    href="https://gautamsolar.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 items-center"
+                >
                     <img
-                        src={companyThemes?.ArthTechSolution?.logo}
-                        // alt={companyThemes?.ArthTechSolution?.name}
-                        // className="h-18 sm:h-24 md:h-24 w-auto object-contain rounded-full items-center"
+                        src="/gautamLogo.png"
                         className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
-
                     />
-                </Link>
+                </a>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
@@ -59,8 +63,8 @@ const Navbar = () => {
                             to={link.path}
                             className={`relative text-lg font-medium transition-all duration-300 group ${
                                 isActive(link.path)
-                                    ? `${companyThemes?.ArthTechSolution?.theme?.primary} font-semibold`
-                                    : `${companyThemes?.ArthTechSolution?.theme?.text} hover:${companyThemes?.ArthTechSolution?.theme?.primary}`
+                                    ? `${companyThemes?.goodlucktechnologies?.theme?.primary} font-semibold`
+                                    : `${companyThemes?.goodlucktechnologies?.theme?.text} hover:${companyThemes?.goodlucktechnologies?.theme?.primary}`
                             }`}
                         >
                             {link.label}
@@ -79,7 +83,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={toggleMenu}
-                    className={`md:hidden ${companyThemes?.ArthTechSolution?.theme?.text} hover:${companyThemes?.ArthTechSolution?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
+                    className={`md:hidden ${companyThemes?.goodlucktechnologies?.theme?.text} hover:${companyThemes?.goodlucktechnologies?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
                     aria-label="Toggle menu"
                 >
                     {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -105,13 +109,13 @@ const Navbar = () => {
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between p-5 border-b border-orange-200">
                     <h2
-                        className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+                        className={`text-xl font-bold ${companyThemes?.goodlucktechnologies?.theme?.gradientText}`}
                     >
                         Menu
                     </h2>
                     <button
                         onClick={closeMenu}
-                        className={`${companyThemes?.ArthTechSolution?.theme?.navbarcloseicon} hover:${companyThemes?.ArthTechSolution?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
+                        className={`${companyThemes?.goodlucktechnologies?.theme?.navbarcloseicon} hover:${companyThemes?.goodlucktechnologies?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
                         aria-label="Close menu"
                     >
                         <FaTimes size={24} />
@@ -119,7 +123,9 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Navigation Links and Logo Container */}
-                <div className={`flex flex-col h-screen ${companyThemes?.ArthTechSolution?.theme?.navmenubgcolor} backdrop-blur-sm`}>
+                <div
+                    className={`flex flex-col h-screen ${companyThemes?.goodlucktechnologies?.theme?.navmenubgcolor} backdrop-blur-sm`}
+                >
                     {/* Scrollable Navigation */}
                     <nav className="flex flex-col mt-4 px-3 space-y-1 flex-1 overflow-y-auto">
                         {navLinks.map((link, index) => (
@@ -130,8 +136,8 @@ const Navbar = () => {
                                 style={{ transitionDelay: `${index * 50}ms` }}
                                 className={`px-4 py-3 rounded-lg text-lg font-semibold transition-all duration-300 ${
                                     isActive(link.path)
-                                        ? `${companyThemes?.ArthTechSolution?.theme?.primary} bg-black border-l-4 border-orange-500 shadow-sm`
-                                        : `${companyThemes?.ArthTechSolution?.theme?.menutextcolor} hover:bg-white/50 hover:${companyThemes?.ArthTechSolution?.theme?.primary}`
+                                        ? `${companyThemes?.goodlucktechnologies?.theme?.primary} bg-black border-l-4 border-orange-500 shadow-sm`
+                                        : `${companyThemes?.goodlucktechnologies?.theme?.menutextcolor} hover:bg-white/50 hover:${companyThemes?.goodlucktechnologies?.theme?.primary}`
                                 } ${
                                     isOpen
                                         ? "opacity-100 translate-x-0"
