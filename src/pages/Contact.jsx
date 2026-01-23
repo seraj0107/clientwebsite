@@ -15,8 +15,8 @@ const Contact = () => {
         AOS.init({ duration: 1000 });
     }, []);
 
-    const phone = companyThemes?.goodlucktechnologies?.phone;
-    const email = companyThemes?.goodlucktechnologies?.email;
+    const phone = companyThemes?.ArthTechSolution?.phone;
+    const email = companyThemes?.ArthTechSolution?.email;
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -31,13 +31,13 @@ const Contact = () => {
     //     {
     //         icon: <FaPhoneAlt size={22} />,
     //         title: "Phone",
-    //         content: companyThemes?.goodlucktechnologies?.phone,
+    //         content: companyThemes?.ArthTechSolution?.phone,
     //         link: phoneLink,
     //     },
     //     {
     //         icon: <FaEnvelope size={22} />,
     //         title: "Email",
-    //         content: companyThemes?.goodlucktechnologies?.email,
+    //         content: companyThemes?.ArthTechSolution?.email,
     //         link: emailLink,
     //     },
     // ];
@@ -63,7 +63,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
                 {/* LEFT SIDE - Contact Information */}
                 <div
-                    className={`${companyThemes?.goodlucktechnologies?.theme?.bg} ${companyThemes?.goodlucktechnologies?.theme?.text} flex items-center justify-center p-6 sm:p-8 lg:p-12 xl:p-16 order-2 lg:order-1`}
+                    className={`${companyThemes?.ArthTechSolution?.theme?.bg} ${companyThemes?.ArthTechSolution?.theme?.text} flex items-center justify-center p-6 sm:p-8 lg:p-12 xl:p-16 order-2 lg:order-1`}
                     data-aos="fade-up"
                 >
                     <div className="max-w-2xl w-full space-y-8">
@@ -72,7 +72,7 @@ const Contact = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-4xl font-bold uppercase mb-4">
                                 Contact{" "}
                                 <span
-                                    className={`${companyThemes?.goodlucktechnologies?.theme?.gradientText}`}
+                                    className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
                                 >
                                     Us
                                 </span>
@@ -88,14 +88,14 @@ const Contact = () => {
                             {contactInfo.map((item, index) => (
                                 <div
                                     key={index}
-                                    className={`${companyThemes?.goodlucktechnologies?.theme?.bg} 
+                                    className={`${companyThemes?.ArthTechSolution?.theme?.bg} 
       border border-gray-200 rounded-xl p-5 shadow-md 
       hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
                                     <div
-                                        className={`${companyThemes?.goodlucktechnologies?.theme?.primary} mb-3`}
+                                        className={`${companyThemes?.ArthTechSolution?.theme?.primary} mb-3`}
                                     >
                                         {item.icon}
                                     </div>
@@ -107,8 +107,8 @@ const Contact = () => {
                                     <a
                                         href={item.link}
                                         className={`text-base lg:text-lg 
-        ${companyThemes?.goodlucktechnologies?.theme?.text}
-        hover:${companyThemes?.goodlucktechnologies?.theme?.primary}
+        ${companyThemes?.ArthTechSolution?.theme?.text}
+        hover:${companyThemes?.ArthTechSolution?.theme?.primary}
         transition-all break-all`}
                                     >
                                         {item.content}
@@ -119,10 +119,10 @@ const Contact = () => {
 
                         {/* CTA Section */}
                         <div
-                            className={` ${companyThemes?.goodlucktechnologies?.theme?.bg} from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-lg p-6 mt-8`}
+                            className={` ${companyThemes?.ArthTechSolution?.theme?.bg} from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-lg p-6 mt-8`}
                         >
                             <h3
-                                className={`text-xl font-bold ${companyThemes?.goodlucktechnologies?.theme?.gradientText} mb-2`}
+                                className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.gradientText} mb-2`}
                             >
                                 Ready to Go Solar?
                             </h3>
@@ -132,7 +132,7 @@ const Contact = () => {
                                 property.
                             </p>
                             <a
-                                href={`tel:${companyThemes?.goodlucktechnologies?.phone}`}
+                                href={`tel:${companyThemes?.ArthTechSolution?.phone}`}
                                 className="inline-block bg-gradient-to-r from-orange-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
                             >
                                 Call Us Now
@@ -164,14 +164,14 @@ const Contact = () => {
                     {/* Background Image */}
                     <img
                         // src="/images/solar.avif"
-                        src={companyThemes?.goodlucktechnologies?.bgimg4}
+                        src={companyThemes?.ArthTechSolution?.bgimg4}
                         alt="Solar Panel"
                         className="w-full h-full object-cover"
                     />
 
                     {/* Overlay */}
                     {/* <div
-                        className={`absolute inset-0 ${companyThemes?.goodlucktechnologies?.theme?.overlay}`}
+                        className={`absolute inset-0 ${companyThemes?.ArthTechSolution?.theme?.overlay}`}
                     ></div> */}
 
                     {/* Logo - Centered on Image */}
@@ -180,11 +180,11 @@ const Contact = () => {
                         data-aos="fade-in"
                     >
                         <div
-                            className={`rounded-full overflow-hidden  p-4 sm:p-6 lg:p-8 shadow-2xl ${companyThemes?.goodlucktechnologies?.theme?.imagebgcolor}`}
+                            className={`rounded-full overflow-hidden  p-4 sm:p-6 lg:p-8 shadow-2xl ${companyThemes?.ArthTechSolution?.theme?.imagebgcolor}`}
                         >
                             <img
-                                src={companyThemes?.goodlucktechnologies?.logo}
-                                alt={`${companyThemes?.goodlucktechnologies?.name} Logo`}
+                                src={companyThemes?.ArthTechSolution?.logo}
+                                alt={`${companyThemes?.ArthTechSolution?.name} Logo`}
                                 // className="w-32 h-32 sm:w-32 sm:h-36 lg:w-38 lg:h-38 object-contain rounded-full"
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
 

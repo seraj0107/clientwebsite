@@ -45,7 +45,7 @@
             "navbarbgcolor": "bg-[#ffffff] backdrop-blur",
             "navbarcloseicon": "text-gray-700",
             "navmenubgcolor": "bg-black",
-            "menutextcolor" : "text-white"
+            "menutextcolor": "text-white"
         }
     },
     "goodlucktechnologies": {
@@ -76,6 +76,38 @@
         "logo": "/arthimg/ArthTechSolution.png",
         "email": "arthtech.solution@gmail.com",
         "phone": "9098110210",
+        "content1": "is an Indore-based solar EPC company specializing in rooftop solar panel installation for residential, commercial, and industrial customers. We provide complete solar EPC  services—from site survey and system design to installation, commissioning, and long-term after-sales support across Indore and nearby regions of Madhya Pradesh.",
+        "content2": "we install ALMM-approved, high-efficiency solar modules engineered for long-term performance, safety, and reliability under Indian conditions.",
+        "whychoose": [
+            {
+                "title": "Local Solar EPC Expert in Indore",
+                "description": "We are a locally established solar EPC company in Indore, offering deep knowledge of regional regulations, site conditions, and DISCOM processes for faster and smoother project execution."
+            },
+            {
+                "title": "Authorized Gautam Solar Tec Pro Certified Dealer",
+                "description": "As an authorized Gautam Solar Tec Pro certified dealer, we provide genuine, ALMM-approved solar modules with assured quality, performance, and manufacturer-backed reliability."
+            },
+            {
+                "title": "Complete Rooftop Solar EPC Execution",
+                "description": "We handle end-to-end rooftop solar EPC services including site survey, system design, procurement, installation, commissioning, and project handover."
+            },
+            {
+                "title": "MNRE Subsidy & Net Metering Assistance",
+                "description": "Our team assists customers with MNRE subsidy documentation and complete net metering approval, ensuring a hassle-free and transparent process."
+            },
+            {
+                "title": "High-Efficiency, ALMM-Approved Solar Modules",
+                "description": "We install high-efficiency, ALMM-approved solar panels designed to deliver consistent performance, safety, and durability under Indian weather conditions."
+            },
+            {
+                "title": "Experienced Engineers & Trained Installation Teams",
+                "description": "Our projects are executed by experienced engineers and professionally trained installation teams following strict safety and quality standards."
+            },
+            {
+                "title": "Transparent Pricing & Dependable After-Sales Support",
+                "description": "We offer clear, upfront pricing with no hidden costs and provide reliable after-sales support, maintenance guidance, and long-term customer care."
+            }
+        ],
         "bgimg1": "/arthimg/arttechimg1.jpg",
         "bgimg2": "/arthimg/arttechimg2.jpg",
         "bgimg3": "/arthimg/arttechimg3.jpg",
@@ -89,7 +121,7 @@
             "text": "text-gray-900",
             "overlay": "bg-gradient-to-br from-rose-900/30 to-purple-900/30",
             "logoBg": "bg-gradient-to-r from-rose-400 to-purple-500 shadow-lg",
-            "navbarbgcolor": "bg-white/85 backdrop-blur-md",
+            "navbarbgcolor": "bg-gray-900/200 backdrop-blur-md",
             "navbarcloseicon": "text-gray-800",
             "navmenubgcolor": "bg-white/95 backdrop-blur-md",
             "imagebgcolor": "bg-amber-50"
