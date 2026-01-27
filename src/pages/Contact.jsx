@@ -15,9 +15,21 @@ const Contact = () => {
         AOS.init({ duration: 1000 });
     }, []);
 
+
+
+ 
+
     const phone = companyThemes?.ArthTechSolution?.phone;
     const email = companyThemes?.ArthTechSolution?.email;
+      const address = companyThemes?.ArthTechSolution?.location
 
+
+         // Google Maps link
+    const mapLink = address
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              address,
+          )}`
+        : "";
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     const phoneLink = phone ? `tel:${phone}` : "";
@@ -26,21 +38,6 @@ const Contact = () => {
             ? `mailto:${email}`
             : `https://mail.google.com/mail/?view=cm&to=${email}`
         : "";
-
-    // const contactInfo = [
-    //     {
-    //         icon: <FaPhoneAlt size={22} />,
-    //         title: "Phone",
-    //         content: companyThemes?.ArthTechSolution?.phone,
-    //         link: phoneLink,
-    //     },
-    //     {
-    //         icon: <FaEnvelope size={22} />,
-    //         title: "Email",
-    //         content: companyThemes?.ArthTechSolution?.email,
-    //         link: emailLink,
-    //     },
-    // ];
 
     const contactInfo = [
         phone && {
@@ -54,6 +51,12 @@ const Contact = () => {
             title: "Email",
             content: email,
             link: emailLink,
+        },
+        address && {
+            icon: <FaMapMarkerAlt size={22} />,
+            title: "Location",
+            content: address,
+            link: mapLink,
         },
     ].filter(Boolean); // 👈 removes empty items
 
@@ -94,6 +97,7 @@ const Contact = () => {
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
+                                  
                                     <div
                                         className={`${companyThemes?.ArthTechSolution?.theme?.primary} mb-3`}
                                     >
@@ -138,21 +142,6 @@ const Contact = () => {
                                 Call Us Now
                             </a>
                         </div>
-
-                        {/* Social Media or Additional Info */}
-                        {/* <div className="text-center lg:text-left pt-4">
-                            <p className="text-sm text-gray-600">
-                                {" "}
-                                <a
-                                    href="https://gautamsolar.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="font-bold text-red-600 hover:underline"
-                                >
-                                    Gautam Solar
-                                </a>
-                            </p>
-                        </div> */}
                     </div>
                 </div>
 
@@ -163,16 +152,10 @@ const Contact = () => {
                 >
                     {/* Background Image */}
                     <img
-                        // src="/images/solar.avif"
                         src={companyThemes?.ArthTechSolution?.bgimg4}
                         alt="Solar Panel"
                         className="w-full h-full object-cover"
                     />
-
-                    {/* Overlay */}
-                    {/* <div
-                        className={`absolute inset-0 ${companyThemes?.ArthTechSolution?.theme?.overlay}`}
-                    ></div> */}
 
                     {/* Logo - Centered on Image */}
                     <div
@@ -187,7 +170,6 @@ const Contact = () => {
                                 alt={`${companyThemes?.ArthTechSolution?.name} Logo`}
                                 // className="w-32 h-32 sm:w-32 sm:h-36 lg:w-38 lg:h-38 object-contain rounded-full"
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
-
                             />
                         </div>
                     </div>

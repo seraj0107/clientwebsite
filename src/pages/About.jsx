@@ -39,31 +39,26 @@ const About = () => {
                                 >
                                     {companyThemes?.ArthTechSolution?.name}
                                 </span>{" "}
-                                is redefining how India goes solar. Driven by
-                                sustainability and innovation, we offer complete
-                                solar solutions—from expert consultation to flawless
-                                installation and reliable support.
+                               {companyThemes?.ArthTechSolution?.aboutContent1}
                             </p>
 
                             <p>
-                                In partnership with{" "}
+                                {companyThemes?.ArthTechSolution?.aboutContent2}
+                            </p>
+
+                            <p>
+                               As a{" "}
                                 <a 
                                     href="https://gautamsolar.com/" 
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="font-semibold text-red-600 hover:underline transition-all"
                                 >
-                                    Gautam Solar
+                                    Gautam Solar Tec Pro Certified Dealer,
                                 </a>
-                                , we deliver high-efficiency, long-lasting systems
-                                tailored for every energy need.
+                                {companyThemes?.ArthTechSolution?.aboutContent3}
                             </p>
 
-                            <p>
-                                From rooftops to large-scale installations, we are here to light the way
-                                forward—cleanly and responsibly. Our commitment to quality and customer satisfaction
-                                sets us apart in the renewable energy sector.
-                            </p>
                         </div>
                     </div>
                 </div>

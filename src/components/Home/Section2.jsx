@@ -8,39 +8,9 @@ const Section2 = () => {
         AOS.init({ duration: 1200 });
     }, []);
 
-    const services = [
-        {
-            title: "Residential Solar",
-            description:
-                "Transform your home into a sustainable energy hub with custom rooftop solar installations that reduce bills and increase property value.",
-            points: [
-                "Rooftop Installation",
-                "Net Metering Setup",
-                "Battery Backup Options",
-            ],
-        },
-        {
-            title: "Commercial Solar",
-            description:
-                "Power your business with scalable solar solutions designed to reduce operational costs and demonstrate environmental responsibility.",
-            points: [
-                "Large-Scale Systems",
-                "Tax Benefits & Incentives",
-                "Energy Audits",
-            ],
-        },
-        {
-            title: "Industrial Solar",
-            description:
-                "Meet high energy demands with robust industrial solar systems that ensure reliability and significant cost savings over time.",
-            points: [
-                "Ground-Mounted Arrays",
-                "Peak Load Management",
-                "Custom Engineering",
-            ],
-        },
-    ];
-
+    const company = companyThemes?.suryadoot;
+    const servicesData = company?.servicesSection;
+    const faqSection = company?.faqSection;
     const process = [
         {
             step: "01",
@@ -76,11 +46,11 @@ const Section2 = () => {
 
     return (
         <section
-            className={`font-[Be_Vietnam_Pro] px-4 sm:px-8 py-14 space-y-20 ${companyThemes?.ArthTechSolution?.theme?.bg}`}
+            className={`font-[Be_Vietnam_Pro] px-4 sm:px-8 py-14 space-y-20 ${companyThemes?.suryadoot?.theme?.bg}`}
         >
             {/* Who We Are Section - Grid Layout */}
             <div
-                className={`${companyThemes?.ArthTechSolution?.theme?.bg} backdrop-blur-lg border border-gray-700 rounded-3xl shadow-xl p-8 md:p-12`}
+                className={`${companyThemes?.suryadoot?.theme?.bg} backdrop-blur-lg border border-gray-700 rounded-3xl shadow-xl p-8 md:p-12`}
                 data-aos="fade-up"
             >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -88,7 +58,7 @@ const Section2 = () => {
                     <div className="order-1">
                         <img
                             // src="/solarphot1.jpg"
-                            src={companyThemes?.ArthTechSolution?.bgimg2}
+                            src={companyThemes?.suryadoot?.bgimg2}
                             alt="Solar"
                             className="rounded-2xl shadow-xl w-full"
                             loading="lazy"
@@ -100,18 +70,18 @@ const Section2 = () => {
                         <h1 className="text-2xl md:text-4xl font-bold text-gray-500">
                             Who{" "}
                             <span
-                                className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+                                className={`${companyThemes?.suryadoot?.theme?.gradientText}`}
                             >
                                 We Are
                             </span>
                         </h1>
                         <p
-                            className={`${companyThemes?.ArthTechSolution?.theme?.text} text-base md:text-lg leading-relaxed`}
+                            className={`${companyThemes?.suryadoot?.theme?.text} text-base md:text-lg leading-relaxed`}
                         >
                             <span
-                                className={`${companyThemes?.ArthTechSolution?.theme?.gradientText} font-semibold`}
+                                className={`${companyThemes?.suryadoot?.theme?.gradientText} font-semibold`}
                             >
-                                {companyThemes?.ArthTechSolution?.name}
+                                {companyThemes?.suryadoot?.name}
                             </span>{" "}
                             offers complete solar energy solutions through
                             expert Engineering, Procurement, and Construction
@@ -120,7 +90,7 @@ const Section2 = () => {
                             a sustainable future.
                         </p>
                         <p
-                            className={`${companyThemes?.ArthTechSolution?.theme?.text} text-base md:text-lg leading-relaxed`}
+                            className={`${companyThemes?.suryadoot?.theme?.text} text-base md:text-lg leading-relaxed`}
                         >
                             In partnership with{" "}
                             <a
@@ -137,7 +107,7 @@ const Section2 = () => {
                             results for every installation.
                         </p>
                         <p
-                            className={`${companyThemes?.ArthTechSolution?.theme?.text} text-base md:text-lg leading-relaxed`}
+                            className={`${companyThemes?.suryadoot?.theme?.text} text-base md:text-lg leading-relaxed`}
                         >
                             With a proven track record across residential,
                             commercial, and industrial sectors, we bring
@@ -150,19 +120,19 @@ const Section2 = () => {
 
             {/* Why Choose Us Section */}
             <div
-                className={`${companyThemes?.ArthTechSolution?.theme?.bg} border border-gray-600 rounded-3xl shadow-xl p-8 md:p-12`}
+                className={`${companyThemes?.suryadoot?.theme?.bg} border border-gray-600 rounded-3xl shadow-xl p-8 md:p-12`}
                 data-aos="fade-up"
             >
                 <h1 className="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-500">
                     Why{" "}
                     <span
-                        className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+                        className={`${companyThemes?.suryadoot?.theme?.gradientText}`}
                     >
                         Choose Us?
                     </span>
                 </h1>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {companyThemes?.ArthTechSolution?.whychoose.map(
+                    {companyThemes?.suryadoot?.whychoose.map(
                         (feature, index) => (
                             <div
                                 key={index}
@@ -174,12 +144,12 @@ const Section2 = () => {
                                     {feature.icon}
                                 </div>
                                 <h2
-                                    className={`text-lg font-semibold ${companyThemes?.ArthTechSolution?.theme?.primary} mb-2`}
+                                    className={`text-lg font-semibold ${companyThemes?.suryadoot?.theme?.primary} mb-2`}
                                 >
                                     {feature.title}
                                 </h2>
                                 <p
-                                    className={`text-sm ${companyThemes?.ArthTechSolution?.theme?.text}`}
+                                    className={`text-sm ${companyThemes?.suryadoot?.theme?.text}`}
                                 >
                                     {feature.description}
                                 </p>
@@ -191,44 +161,48 @@ const Section2 = () => {
 
             {/* Our Services Section */}
             <div className="space-y-10" data-aos="fade-up">
-                <h1 className="text-4xl md:text-4xl font-bold text-center text-gray-500">
-                    Our{" "}
-                    <span
-                        className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
-                    >
-                        Services
+                <h1 className="text-4xl font-bold text-center text-gray-500">
+                    {servicesData?.heading.split(" ")[0]}{" "}
+                    <span className={company.theme.gradientText}>
+                        {servicesData?.heading.split(" ").slice(1).join(" ")}
                     </span>
                 </h1>
+
                 <div className="grid md:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
+                    {servicesData?.services.map((service, index) => (
                         <div
                             key={index}
-                            className={`${companyThemes?.ArthTechSolution?.theme?.bg} border border-gray-300 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300`}
+                            className={`${company.theme.bg} border rounded-3xl p-8 shadow-lg`}
                             data-aos="fade-up"
                             data-aos-delay={index * 150}
                         >
                             <h2
-                                className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.primary} mb-4`}
+                                className={`text-xl font-bold ${company.theme.primary} mb-4`}
                             >
                                 {service.title}
                             </h2>
-                            <p
-                                className={`${companyThemes?.ArthTechSolution?.theme?.text} text-base mb-6 leading-relaxed`}
-                            >
+
+                            <p className={`${company.theme.text} mb-4`}>
                                 {service.description}
                             </p>
+
+                            {service.systemSizes && (
+                                <p className="text-sm font-semibold mb-3">
+                                    System Sizes:{" "}
+                                    {service.systemSizes.join(", ")}
+                                </p>
+                            )}
+
                             <ul className="space-y-2">
                                 {service.points.map((point, idx) => (
                                     <li
                                         key={idx}
-                                        className={`flex items-center gap-2 ${companyThemes?.ArthTechSolution?.theme?.text}`}
+                                        className="flex gap-2 text-sm"
                                     >
-                                        <span
-                                            className={`${companyThemes?.ArthTechSolution?.theme?.primary}`}
-                                        >
+                                        <span className={company.theme.primary}>
                                             ✓
                                         </span>
-                                        <span className="text-sm">{point}</span>
+                                        {point}
                                     </li>
                                 ))}
                             </ul>
@@ -237,15 +211,54 @@ const Section2 = () => {
                 </div>
             </div>
 
+            {/* FAQ Section */}
+            <section
+                className="max-w-5xl mx-auto space-y-10"
+                data-aos="fade-up"
+            >
+                {/* FAQ Heading */}
+                <div className="text-center">
+                    <h2
+                        className={`${companyThemes?.suryadoot?.theme?.gradientText} text-2xl md:text-4xl font-bold`}
+                    >
+                        {faqSection?.heading}
+                    </h2>
+                    <p className="mt-3 text-sm md:text-base text-gray-500">
+                        Common questions about solar installation, subsidy, and
+                        process
+                    </p>
+                </div>
+
+                {/* FAQ Cards (THIS IS WHERE YOUR CODE GOES) */}
+                <div className="space-y-6">
+                    {faqSection?.items.map((faq, index) => (
+                        <div
+                            key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 120}
+                            className="rounded-3xl border border-gray-300 bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+                        >
+                            <h3 className="text-base md:text-lg font-semibold text-gray-900">
+                                {faq.q}
+                            </h3>
+
+                            <p className="mt-3 text-sm md:text-base text-gray-600 leading-relaxed">
+                                {faq.a}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
             {/* Our Process Section */}
             <div
-                className={`${companyThemes?.ArthTechSolution?.theme?.bg} border border-gray-700 rounded-3xl shadow-xl p-8 md:p-12`}
+                className={`${companyThemes?.suryadoot?.theme?.bg} border border-gray-700 rounded-3xl shadow-xl p-8 md:p-12`}
                 data-aos="fade-up"
             >
                 <h1 className="text-4xl md:text-3xl font-bold text-center mb-12 text-gray-500">
                     Our{" "}
                     <span
-                        className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+                        className={`${companyThemes?.suryadoot?.theme?.gradientText}`}
                     >
                         Process
                     </span>
@@ -259,18 +272,18 @@ const Section2 = () => {
                             data-aos-delay={index * 100}
                         >
                             <div
-                                className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.gradientText} opacity-50`}
+                                className={`text-xl font-bold ${companyThemes?.suryadoot?.theme?.gradientText} opacity-50`}
                             >
                                 {item.step}
                             </div>
                             <div className="flex-1">
                                 <h3
-                                    className={`text-lg md:text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.primary} mb-2`}
+                                    className={`text-lg md:text-xl font-bold ${companyThemes?.suryadoot?.theme?.primary} mb-2`}
                                 >
                                     {item.title}
                                 </h3>
                                 <p
-                                    className={`${companyThemes?.ArthTechSolution?.theme?.text} text-base leading-relaxed`}
+                                    className={`${companyThemes?.suryadoot?.theme?.text} text-base leading-relaxed`}
                                 >
                                     {item.description}
                                 </p>
@@ -295,19 +308,19 @@ const Section2 = () => {
 
             {/* Experience Section */}
             <div
-                className={`relative w-full py-20 ${companyThemes?.ArthTechSolution?.theme?.bg} border border-gray-700 ${companyThemes?.ArthTechSolution?.theme?.text} rounded-3xl overflow-hidden`}
+                className={`relative w-full py-20 ${companyThemes?.suryadoot?.theme?.bg} border border-gray-700 ${companyThemes?.suryadoot?.theme?.text} rounded-3xl overflow-hidden`}
                 data-aos="fade-up"
             >
                 <div className="relative z-10 max-w-6xl mx-auto px-6 space-y-6">
                     <h1 className="text-2xl md:text-5xl font-bold">
-                        Experience {companyThemes?.ArthTechSolution?.name}
+                        Experience {companyThemes?.suryadoot?.name}
                     </h1>
                     <p className="text-md md:text-lg">
                         Choosing{" "}
                         <span
-                            className={`${companyThemes?.ArthTechSolution?.theme?.gradientText} font-semibold`}
+                            className={`${companyThemes?.suryadoot?.theme?.gradientText} font-semibold`}
                         >
-                            {companyThemes?.ArthTechSolution?.name}
+                            {companyThemes?.suryadoot?.name}
                         </span>{" "}
                         means aligning with a forward-focused company dedicated
                         to sustainable innovation and client success—from
@@ -326,3 +339,19 @@ const Section2 = () => {
 };
 
 export default Section2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

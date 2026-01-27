@@ -6,7 +6,7 @@ const Footer = () => {
 
     const phone = company?.phone;
     const email = company?.email;
-
+    const address = company?.location;
     const isMobile =
         typeof navigator !== "undefined" &&
         /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -16,6 +16,12 @@ const Footer = () => {
         ? isMobile
             ? `mailto:${email}`
             : `https://mail.google.com/mail/?view=cm&to=${email}`
+        : "";
+
+    const mapLink = address
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              address,
+          )}`
         : "";
 
     return (
@@ -97,6 +103,24 @@ const Footer = () => {
                                 </a>
                             </div>
                         )}
+
+                        {address && (
+                            <div className="flex items-center gap-2">
+                                <span>📍</span>
+                                <a
+                                    href={mapLink}
+                                    target={!isMobile ? "_blank" : undefined}
+                                    rel={
+                                        !isMobile
+                                            ? "noopener noreferrer"
+                                            : undefined
+                                    }
+                                    className="hover:underline text-sm md:text-base"
+                                >
+                                    {address}
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -118,24 +142,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //import React, { useState, useEffect } from "react";
 // import {

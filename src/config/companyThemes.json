@@ -4,12 +4,45 @@
         "logo": "/suryadootimg/suryadoot-logo.jpg",
         "email": "himanshu546717@gmail.com",
         "phone": "8989933932",
+        "location": "",
         "bgimg1": "/suryadootimg/suryadootimg1.jpg",
         "bgimg2": "/suryadootimg/suryadootimg2.jpg",
         "bgimg3": "/suryadootimg/suryadootimg3.jpg",
         "bgimg4": "/suryadootimg/suryadootimg4.jpeg",
         "bgimg5": "/suryadootimg/suryadootimg5.jpg",
+        "sectioncontent1": "is a locally-based solar EPC company specializing in rooftop and ground-mounted solar power plant installation for residential, commercial, and industrial customers. We deliver complete solar EPC services—from site assessment and system design to installation, commissioning, and long-term after-sales support across your city and nearby regions of your state.",
+        "sectioncontent2": "we install ALMM-approved, high-efficiency solar modules designed for long-term performance, safety, and dependable energy generation under Indian conditions.",
 
+        "whychoose": [
+            {
+                "title": "Local Solar EPC Expert in Indore",
+                "description": "We are a locally established solar EPC company in Indore, offering deep knowledge of regional regulations, site conditions, and DISCOM processes for faster and smoother project execution."
+            },
+            {
+                "title": "Authorized Gautam Solar Tec Pro Certified Dealer",
+                "description": "As an authorized Gautam Solar Tec Pro certified dealer, we provide genuine, ALMM-approved solar modules with assured quality, performance, and manufacturer-backed reliability."
+            },
+            {
+                "title": "Complete Rooftop Solar EPC Execution",
+                "description": "We handle end-to-end rooftop solar EPC services including site survey, system design, procurement, installation, commissioning, and project handover."
+            },
+            {
+                "title": "MNRE Subsidy & Net Metering Assistance",
+                "description": "Our team assists customers with MNRE subsidy documentation and complete net metering approval, ensuring a hassle-free and transparent process."
+            },
+            {
+                "title": "High-Efficiency, ALMM-Approved Solar Modules",
+                "description": "We install high-efficiency, ALMM-approved solar panels designed to deliver consistent performance, safety, and durability under Indian weather conditions."
+            },
+            {
+                "title": "Experienced Engineers & Trained Installation Teams",
+                "description": "Our projects are executed by experienced engineers and professionally trained installation teams following strict safety and quality standards."
+            },
+            {
+                "title": "Transparent Pricing & Dependable After-Sales Support",
+                "description": "We offer clear, upfront pricing with no hidden costs and provide reliable after-sales support, maintenance guidance, and long-term customer care."
+            }
+        ],
         "theme": {
             "primary": "text-orange-500",
             "secondary": "text-yellow-600",
@@ -53,6 +86,7 @@
         "logo": "/goodluckimg/goodlucktechnologies.png",
         "email": "",
         "phone": "7047227777",
+
         "bgimg1": "/goodluckimg/goodluckimg1.jpg",
         "bgimg2": "/goodluckimg/goodluckimg2.jpg",
         "bgimg3": "/goodluckimg/goodluckimg3.jpg",
@@ -76,8 +110,9 @@
         "logo": "/arthimg/ArthTechSolution.png",
         "email": "arthtech.solution@gmail.com",
         "phone": "9098110210",
-        "content1": "is an Indore-based solar EPC company specializing in rooftop solar panel installation for residential, commercial, and industrial customers. We provide complete solar EPC  services—from site survey and system design to installation, commissioning, and long-term after-sales support across Indore and nearby regions of Madhya Pradesh.",
-        "content2": "we install ALMM-approved, high-efficiency solar modules engineered for long-term performance, safety, and reliability under Indian conditions.",
+        "location": "Indore, Madhya Pradesh",
+        "sectioncontent1": "is an Indore-based solar EPC company specializing in rooftop solar panel installation for residential, commercial, and industrial customers. We provide complete solar EPC  services—from site survey and system design to installation, commissioning, and long-term after-sales support across Indore and nearby regions of Madhya Pradesh.",
+        "sectioncontent2": "we install ALMM-approved, high-efficiency solar modules engineered for long-term performance, safety, and reliability under Indian conditions.",
         "whychoose": [
             {
                 "title": "Local Solar EPC Expert in Indore",
@@ -108,6 +143,57 @@
                 "description": "We offer clear, upfront pricing with no hidden costs and provide reliable after-sales support, maintenance guidance, and long-term customer care."
             }
         ],
+
+        "servicesSection": {
+            "heading": "Our Services",
+            "services": [
+                {
+                    "title": "Residential Solar Installation in Indore",
+                    "description": "We design and install rooftop solar systems for homes and housing societies in Indore. Our solutions reduce electricity bills and help customers benefit from MNRE subsidies.",
+                    "systemSizes": ["1kW", "3kW", "5kW", "10kW"],
+                    "points": [
+                        "Rooftop solar installation",
+                        "Net metering support",
+                        "MNRE subsidy assistance"
+                    ]
+                },
+                {
+                    "title": "Commercial Solar EPC in Indore",
+                    "description": "Ideal for offices, schools, hospitals, and retail outlets with optimized system design for maximum ROI.",
+                    "points": [
+                        "Customized EPC solutions",
+                        "High ROI system design",
+                        "Long-term operational reliability"
+                    ]
+                },
+                {
+                    "title": "Industrial Solar EPC Projects",
+                    "description": "Large-scale rooftop and captive solar EPC projects designed for high-load industrial requirements.",
+                    "points": [
+                        "High-capacity systems",
+                        "Safety & compliance focused",
+                        "Industrial-grade engineering"
+                    ]
+                }
+            ]
+        },
+
+        "faqSection": {
+            "heading": "FAQs",
+            "items": [
+                {
+                    "q": "Is rooftop solar suitable for homes in Indore?",
+                    "a": "Yes. Indore receives good solar irradiation, making rooftop solar highly effective."
+                },
+                {
+                    "q": "Can I get MNRE subsidy?",
+                    "a": "Yes, subject to eligibility and government policy. We assist end-to-end."
+                }
+            ]
+        },
+        "aboutContent1": "is committed to supporting India’s transition to clean and sustainable energy through reliable rooftop solar solutions. Based in Indore, we focus on delivering technically sound solar EPC projects with strong emphasis on safety, quality execution, and long-term system performance",
+        "aboutContent2": "Our team manages the entire solar project lifecycle—starting from feasibility assessment and system design to installation, commissioning, and post-installation support. By combining local execution expertise with proven solar technology, we help homeowners, businesses, and industries reduce electricity costs and achieve energy independence",
+        "aboutContent3": "our installation practices align with manufacturer-recommended standards and industry best practices",
         "bgimg1": "/arthimg/arttechimg1.jpg",
         "bgimg2": "/arthimg/arttechimg2.jpg",
         "bgimg3": "/arthimg/arttechimg3.jpg",
@@ -121,7 +207,7 @@
             "text": "text-gray-900",
             "overlay": "bg-gradient-to-br from-rose-900/30 to-purple-900/30",
             "logoBg": "bg-gradient-to-r from-rose-400 to-purple-500 shadow-lg",
-            "navbarbgcolor": "bg-gray-900/200 backdrop-blur-md",
+            "navbarbgcolor": "bg-white backdrop-blur-md",
             "navbarcloseicon": "text-gray-800",
             "navmenubgcolor": "bg-white/95 backdrop-blur-md",
             "imagebgcolor": "bg-amber-50"

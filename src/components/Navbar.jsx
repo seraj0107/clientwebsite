@@ -48,13 +48,13 @@
 
 //     return (
 //         <header
-//             className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.ArthTechSolution?.theme?.text} shadow-lg ${companyThemes?.ArthTechSolution?.theme?.navbarbgcolor} backdrop-blur-sm `}
+//             className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.suryadoot?.theme?.text} shadow-lg ${companyThemes?.suryadoot?.theme?.navbarbgcolor} backdrop-blur-sm `}
 //         >
 //             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center">
 //                 {/* Logo */}
 //                 {/* <Link to="/" className="flex-shrink-0 items-center">
 //                     <img
-//                         src={companyThemes?.ArthTechSolution?.logo}
+//                         src={companyThemes?.suryadoot?.logo}
 //                         alt=""
 //                         className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
 //                     />
@@ -69,7 +69,7 @@
 //                     }`}
 //                 >
 //                     <img
-//                         src={companyThemes?.ArthTechSolution?.logo}
+//                         src={companyThemes?.suryadoot?.logo}
 //                         alt="Company Logo"
 //                         className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
 //                     />
@@ -82,8 +82,8 @@
 //                             to={link.path}
 //                             className={`relative text-lg font-medium transition-all duration-300 group ${
 //                                 isActive(link.path)
-//                                     ? `${companyThemes?.ArthTechSolution?.theme?.primary} font-semibold`
-//                                     : `${companyThemes?.ArthTechSolution?.theme?.text} hover:${companyThemes?.ArthTechSolution?.theme?.primary}`
+//                                     ? `${companyThemes?.suryadoot?.theme?.primary} font-semibold`
+//                                     : `${companyThemes?.suryadoot?.theme?.text} hover:${companyThemes?.suryadoot?.theme?.primary}`
 //                             }`}
 //                         >
 //                             {link.label}
@@ -116,7 +116,7 @@
 //                 {/* Mobile Menu Button */}
 //                 <button
 //                     onClick={toggleMenu}
-//                     className={`md:hidden ${companyThemes?.ArthTechSolution?.theme?.text} hover:${companyThemes?.ArthTechSolution?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
+//                     className={`md:hidden ${companyThemes?.suryadoot?.theme?.text} hover:${companyThemes?.suryadoot?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
 //                     aria-label="Toggle menu"
 //                 >
 //                     {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -142,13 +142,13 @@
 //                 {/* Drawer Header */}
 //                 <div className="flex items-center justify-between p-5 border-b border-orange-200">
 //                     <h2
-//                         className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+//                         className={`text-xl font-bold ${companyThemes?.suryadoot?.theme?.gradientText}`}
 //                     >
 //                         Menu
 //                     </h2>
 //                     <button
 //                         onClick={closeMenu}
-//                         className={`${companyThemes?.ArthTechSolution?.theme?.navbarcloseicon} hover:${companyThemes?.ArthTechSolution?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
+//                         className={`${companyThemes?.suryadoot?.theme?.navbarcloseicon} hover:${companyThemes?.suryadoot?.theme?.primary} transition-all duration-200 active:scale-90 p-2`}
 //                         aria-label="Close menu"
 //                     >
 //                         <FaTimes size={24} />
@@ -157,7 +157,7 @@
 
 //                 {/* Mobile Navigation Links and Logo Container */}
 //                 <div
-//                     className={`flex flex-col h-screen ${companyThemes?.ArthTechSolution?.theme?.navmenubgcolor} backdrop-blur-sm`}
+//                     className={`flex flex-col h-screen ${companyThemes?.suryadoot?.theme?.navmenubgcolor} backdrop-blur-sm`}
 //                 >
 //                     {/* Scrollable Navigation */}
 //                     <nav className="flex flex-col mt-4 px-3 space-y-1 flex-1 overflow-y-auto">
@@ -169,8 +169,8 @@
 //                                 style={{ transitionDelay: `${index * 50}ms` }}
 //                                 className={`px-4 py-3 rounded-lg text-lg font-semibold transition-all duration-300 ${
 //                                     isActive(link.path)
-//                                         ? `${companyThemes?.ArthTechSolution?.theme?.primary} bg-black border-l-4 border-orange-500 shadow-sm`
-//                                         : `${companyThemes?.ArthTechSolution?.theme?.menutextcolor} hover:bg-white/50 hover:${companyThemes?.ArthTechSolution?.theme?.primary}`
+//                                         ? `${companyThemes?.suryadoot?.theme?.primary} bg-black border-l-4 border-orange-500 shadow-sm`
+//                                         : `${companyThemes?.suryadoot?.theme?.menutextcolor} hover:bg-white/50 hover:${companyThemes?.suryadoot?.theme?.primary}`
 //                                 } ${
 //                                     isOpen
 //                                         ? "opacity-100 translate-x-0"
@@ -207,8 +207,6 @@
 // };
 
 // export default Navbar;
-
-
 
 // import React, { useState, useEffect } from "react";
 // import {
@@ -276,7 +274,7 @@
 
 //     return (
 //         <header
-//             className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.ArthTechSolution?.theme?.text} shadow-lg ${companyThemes?.ArthTechSolution?.theme?.navbarbgcolor} backdrop-blur-sm `}
+//             className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.suryadoot?.theme?.text} shadow-lg ${companyThemes?.suryadoot?.theme?.navbarbgcolor} backdrop-blur-sm `}
 //         >
 //             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
 //                 {/* Company Logo with glow effect - disappears when scrolled */}
@@ -298,11 +296,11 @@
 //                                     : "opacity-0 scale-100"
 //                             }`}
 //                             style={{
-//                                 background: `radial-gradient(circle, ${companyThemes?.ArthTechSolution?.theme?.primary} 0%, transparent 70%)`,
+//                                 background: `radial-gradient(circle, ${companyThemes?.suryadoot?.theme?.primary} 0%, transparent 70%)`,
 //                             }}
 //                         />
 //                         <img
-//                             src={companyThemes?.ArthTechSolution?.logo}
+//                             src={companyThemes?.suryadoot?.logo}
 //                             alt="Company Logo"
 //                             className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full border-2 border-white/20 shadow-lg z-10"
 //                         />
@@ -317,8 +315,8 @@
 //                             to={link.path}
 //                             className={`relative px-6 py-3 text-lg font-medium transition-all duration-300 group ${
 //                                 isActive(link.path)
-//                                     ? `${companyThemes?.ArthTechSolution?.theme?.primary} font-semibold`
-//                                     : `${companyThemes?.ArthTechSolution?.theme?.text} hover:text-sky-700`
+//                                     ? `${companyThemes?.suryadoot?.theme?.primary} font-semibold`
+//                                     : `${companyThemes?.suryadoot?.theme?.text} hover:text-sky-700`
 //                             }`}
 //                         >
 //                             <div className="flex items-center">
@@ -361,7 +359,7 @@
 //                                     isScrolled ? "scale-100" : ""
 //                                 }`}
 //                             />
-                          
+
 //                             <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 bg-black/90 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
 //                                 Visit Gautam Solar
 //                                 <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 bg-black/90 rotate-45" />
@@ -372,7 +370,7 @@
 
 //                 <button
 //                     onClick={toggleMenu}
-//                     className={`md:hidden relative ${companyThemes?.ArthTechSolution?.theme?.text} hover:text-orange-400 transition-all duration-200 active:scale-90 p-2 z-50`}
+//                     className={`md:hidden relative ${companyThemes?.suryadoot?.theme?.text} hover:text-orange-400 transition-all duration-200 active:scale-90 p-2 z-50`}
 //                     aria-label="Toggle menu"
 //                 >
 //                     <div className="relative w-8 h-8">
@@ -582,12 +580,6 @@
 
 // export default Navbar;
 
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import {
     FaBars,
@@ -653,7 +645,7 @@ const Navbar = () => {
 
     return (
         <header
-            className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.ArthTechSolution?.theme?.text} shadow-lg ${companyThemes?.ArthTechSolution?.theme?.navbarbgcolor} backdrop-blur-sm`}
+            className={`w-full fixed top-0 left-0 z-50 ${companyThemes?.suryadoot?.theme?.text} shadow-lg ${companyThemes?.suryadoot?.theme?.navbarbgcolor} backdrop-blur-sm`}
         >
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center">
                 {/* Company Logo - Shows on all screens */}
@@ -662,7 +654,7 @@ const Navbar = () => {
                     className="flex-shrink-0 flex items-center transition-all duration-300 hover:scale-105"
                 >
                     <img
-                        src={companyThemes?.ArthTechSolution?.logo}
+                        src={companyThemes?.suryadoot?.logo}
                         alt="Company Logo"
                         className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain rounded-full border-2 border-white/20 shadow-lg"
                     />
@@ -676,8 +668,8 @@ const Navbar = () => {
                             to={link.path}
                             className={`relative px-6 py-3 text-lg font-medium transition-all duration-300 group ${
                                 isActive(link.path)
-                                    ? `${companyThemes?.ArthTechSolution?.theme?.primary} font-semibold`
-                                    : `${companyThemes?.ArthTechSolution?.theme?.text} hover:text-sky-700`
+                                    ? `${companyThemes?.suryadoot?.theme?.primary} font-semibold`
+                                    : `${companyThemes?.suryadoot?.theme?.text} hover:text-sky-700`
                             }`}
                         >
                             <div className="flex items-center">
@@ -712,7 +704,7 @@ const Navbar = () => {
                                 alt="Gautam Solar"
                                 className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain rounded-full border-2 border-white/20 shadow-lg"
                             />
-                            
+
                             {/* Tooltip - Only on desktop */}
                             <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-1 bg-black/90 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
                                 Visit Gautam Solar
@@ -725,7 +717,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={toggleMenu}
-                    className={`md:hidden relative ${companyThemes?.ArthTechSolution?.theme?.text} hover:text-orange-400 transition-all duration-200 active:scale-90 p-2 z-50 ml-4`}
+                    className={`md:hidden relative ${companyThemes?.suryadoot?.theme?.text} hover:text-orange-400 transition-all duration-200 active:scale-90 p-2 z-50 ml-4`}
                     aria-label="Toggle menu"
                 >
                     <div className="relative w-8 h-8">
