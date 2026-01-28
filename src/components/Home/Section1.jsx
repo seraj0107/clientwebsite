@@ -1,16 +1,25 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import companyThemes from "../../config/companyThemes.json";
 
 const Section1 = () => {
+    const { company } = useParams(); 
+    const companyData = companyThemes[company]; 
+
     useEffect(() => {
         window.scrollTo(0, 0);
         AOS.init({ duration: 1000 });
     }, []);
 
-    const phone = companyThemes?.suryadoot?.phone;
-    const email = companyThemes?.suryadoot?.email;
+    // Force AOS refresh when company changes
+    useEffect(() => {
+        AOS.refresh();
+    }, [company]);
+
+    const phone = companyData?.phone;
+    const email = companyData?.email;
 
     const isMobile =
         typeof navigator !== "undefined" &&
@@ -29,15 +38,15 @@ const Section1 = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
                 {/* LEFT SIDE - Content (Order: 1) */}
                 <div
-                    className={`${companyThemes.suryadoot.theme.bg} ${companyThemes.suryadoot.theme.text} flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-16 order-2 lg:order-1`}
+                    className={`${companyData.theme.bg} ${companyData.theme.text} flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-16 order-2 lg:order-1`}
                     data-aos="fade-up"
                 >
                     <div className="max-w-2xl w-full space-y-4 md:space-y-6 lg:space-y-8">
                         {/* Heading */}
                         <h1
-                            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase ${companyThemes.suryadoot.theme.gradientText} text-center lg:text-left leading-tight`}
+                            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase ${companyData.theme.gradientText} text-center lg:text-left leading-tight`}
                         >
-                            {companyThemes.suryadoot.name}
+                            {companyData.name}
                         </h1>
 
                         {/* Paragraphs */}
@@ -45,11 +54,11 @@ const Section1 = () => {
                             <p>
                                 At{" "}
                                 <span
-                                    className={`font-semibold ${companyThemes.suryadoot.theme.gradientText}`}
+                                    className={`font-semibold ${companyData.theme.gradientText}`}
                                 >
-                                    {companyThemes.suryadoot.name}
+                                    {companyData.name}
                                 </span>
-                                , {companyThemes?.suryadoot?.sectioncontent1}
+                                , {companyData?.sectioncontent1}
                             </p>
 
                             <p>
@@ -62,29 +71,19 @@ const Section1 = () => {
                                 >
                                     Gautam Solar Tec Pro Certified Dealer
                                 </a>
-                                ,{companyThemes?.suryadoot?.sectioncontent2}
+                                , {companyData?.sectioncontent2}
                             </p>
-
-                            {/* <p>
-                                With{" "}
-                                <span
-                                    className={`${companyThemes.suryadoot.theme.gradientText} font-bold`}
-                                >
-                                    {companyThemes.suryadoot.name}
-                                </span>
-                                , going solar is effortless, empowering, and
-                                truly sustainable.
-                            </p> */}
 
                             <p className="text-xs sm:text-sm md:text-base opacity-90">
                                 We are a trusted EPC provider delivering
                                 end-to-end solar solutions. Specializing in
                                 high-performance turnkey systems, we combine
                                 innovation and sustainability to power a
-                                brighter, greener future
+                                brighter, greener future.
                             </p>
                         </div>
 
+                        {/* Contact Info */}
                         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 pt-3 md:pt-4 text-xs sm:text-sm md:text-base">
                             {email && (
                                 <a
@@ -95,7 +94,7 @@ const Section1 = () => {
                                             ? "noopener noreferrer"
                                             : undefined
                                     }
-                                    className={`${companyThemes.suryadoot.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
+                                    className={`${companyData.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
                                 >
                                     <span>📧</span>
                                     <span className="break-all">{email}</span>
@@ -105,7 +104,7 @@ const Section1 = () => {
                             {phone && (
                                 <a
                                     href={phoneLink}
-                                    className={`${companyThemes.suryadoot.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
+                                    className={`${companyData.theme.primary} hover:underline transition-all flex items-center gap-1 md:gap-2`}
                                 >
                                     <span>📞</span>
                                     <span>{phone}</span>
@@ -121,25 +120,28 @@ const Section1 = () => {
                     data-aos="zoom-out"
                 >
                     <img
-                        src={companyThemes?.suryadoot?.bgimg1}
+                        src={companyData?.bgimg1}
                         alt="Solar Panel"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
 
-                    {/* Gradient overlay for better text contrast if needed */}
+                    {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-black/20 lg:to-transparent"></div>
 
+                    {/* Logo Overlay */}
                     <div
                         className="absolute inset-0 flex items-center justify-center"
                         data-aos="fade-in"
                     >
                         <div
-                            className={`rounded-full overflow-hidden p-3 sm:p-4 md:p-5 lg:p-6 shadow-2xl ${companyThemes?.suryadoot?.theme?.imagebgcolor} backdrop-blur-sm `}
+                            className={`rounded-full overflow-hidden p-3 sm:p-4 md:p-5 lg:p-6 shadow-2xl ${
+                                companyData?.theme?.imagebgcolor ||
+                                "bg-white/10"
+                            } backdrop-blur-sm`}
                         >
                             <img
-                                src={companyThemes.suryadoot.logo}
-                                alt={`${companyThemes.suryadoot.name} Logo`}
-                                // className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-38 lg:h-38 object-contain rounded-full"
+                                src={companyData.logo}
+                                alt={`${companyData.name} Logo`}
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
                             />
                         </div>

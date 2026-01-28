@@ -1,35 +1,42 @@
-import React from "react";
+import { Routes, Route, Navigate, useParams } from "react-router-dom";
+import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
+import NotFound from "./components/Home/NotFound";
+import companyThemes from "./config/companyThemes.json";
+import { useEffect } from "react";
+
+const ValidateCompany = () => {
+    const { company } = useParams();
+
+    useEffect(() => {
+   
+        document.title = companyThemes[company]?.name;
+
+        const favicon = document.querySelector("link[rel='icon']");
+
+        if (favicon) {
+            favicon.href = companyThemes[company]?.logo;
+        }
+    }, [company]);
+    if (!companyThemes[company]) {
+        return <NotFound />;
+    }
+
+    return <Layout />;
+};
 
 const App = () => {
     return (
-        <>
-            {/* <a
-                href="https://gautamsolar.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" fixed right-1 bottom-20 z-50 hover:opacity-80 transition-opacity "
-            >
-                <img
-                    src="/gautamLogo.png"
-                    alt="Gautam Solar"
-                    className="w-20 sm:w-24 md:w-32 lg:w-36 h-auto"
-                />
-            </a> */}
-
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-            <Footer />
-        </>
+        <Routes>
+            <Route path="/:company" element={<ValidateCompany />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     );
 };
 

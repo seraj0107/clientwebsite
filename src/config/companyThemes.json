@@ -15,34 +15,110 @@
 
         "whychoose": [
             {
-                "title": "Local Solar EPC Expert in Indore",
-                "description": "We are a locally established solar EPC company in Indore, offering deep knowledge of regional regulations, site conditions, and DISCOM processes for faster and smoother project execution."
+                "title": "Local Solar EPC Expert",
+                "description": "Experienced solar EPC professionals with strong understanding of regulatory processes and site requirements."
             },
             {
-                "title": "Authorized Gautam Solar Tec Pro Certified Dealer",
-                "description": "As an authorized Gautam Solar Tec Pro certified dealer, we provide genuine, ALMM-approved solar modules with assured quality, performance, and manufacturer-backed reliability."
+                "title": "Authorized Gautam Solar Tec Pro Dealer",
+                "description": "Certified dealer providing genuine, ALMM-approved solar modules with assured quality and manufacturer support."
             },
             {
-                "title": "Complete Rooftop Solar EPC Execution",
-                "description": "We handle end-to-end rooftop solar EPC services including site survey, system design, procurement, installation, commissioning, and project handover."
+                "title": "End-to-End Rooftop & Ground-Mounted Solar EPC Services",
+                "description": "Complete solar EPC solutions from site survey and design to installation, commissioning, and handover."
             },
             {
                 "title": "MNRE Subsidy & Net Metering Assistance",
-                "description": "Our team assists customers with MNRE subsidy documentation and complete net metering approval, ensuring a hassle-free and transparent process."
+                "description": "End-to-end support for MNRE subsidy documentation and net metering approvals."
             },
             {
                 "title": "High-Efficiency, ALMM-Approved Solar Modules",
-                "description": "We install high-efficiency, ALMM-approved solar panels designed to deliver consistent performance, safety, and durability under Indian weather conditions."
+                "description": "Installation of high-efficiency solar panels designed for long-term performance and safety."
             },
             {
-                "title": "Experienced Engineers & Trained Installation Teams",
-                "description": "Our projects are executed by experienced engineers and professionally trained installation teams following strict safety and quality standards."
+                "title": "Skilled Engineers & Trained Installation Teams",
+                "description": "Projects executed by qualified engineers and trained technicians following quality and safety standards."
             },
             {
-                "title": "Transparent Pricing & Dependable After-Sales Support",
-                "description": "We offer clear, upfront pricing with no hidden costs and provide reliable after-sales support, maintenance guidance, and long-term customer care."
+                "title": "Transparent Execution & Reliable After-Sales Support",
+                "description": "Clear pricing, transparent execution, and dependable after-sales service for long-term peace of mind."
             }
         ],
+        "servicesSection": {
+            "heading": "Our Services",
+            "services": [
+                {
+                    "title": "Residential Rooftop Solar Systems",
+                    "description": "Rooftop solar solutions designed for homes and housing societies to reduce electricity bills, improve energy independence, and enable MNRE subsidy benefits.",
+                    "systemSizes": ["1kW", "3kW", "5kW", "10kW"],
+                    "points": [
+                        "Customized rooftop solar installation",
+                        "Net metering support",
+                        "MNRE subsidy assistance"
+                    ]
+                },
+                {
+                    "title": "Commercial Solar Power Plants",
+                    "description": "Solar EPC solutions for offices, hospitals, educational institutions, and commercial complexes with optimized system design for maximum return on investment.",
+                    "points": [
+                        "Customized commercial EPC solutions",
+                        "Optimized system design for high ROI",
+                        "Reliable long-term system performance"
+                    ]
+                },
+                {
+                    "title": "Industrial Solar EPC Projects",
+                    "description": "High-capacity rooftop and captive solar EPC projects engineered for industrial power requirements with a strong focus on safety and durability.",
+                    "points": [
+                        "High-capacity solar systems",
+                        "Strict safety and compliance standards",
+                        "Industrial-grade engineering solutions"
+                    ]
+                },
+                {
+                    "title": "On-Grid Solar Systems",
+                    "description": "Grid-connected solar systems that allow users to export excess power to the utility grid through net metering for maximum energy savings.",
+                    "points": [
+                        "Grid-connected solar solutions",
+                        "Net metering integration",
+                        "Efficient energy export and savings"
+                    ]
+                },
+                {
+                    "title": "Customized Solar Integration Solutions",
+                    "description": "Tailor-made solar solutions designed to integrate seamlessly with existing electrical infrastructure and specific energy requirements.",
+                    "points": [
+                        "Site-specific system design",
+                        "Flexible solar integration options",
+                        "Scalable and future-ready solutions"
+                    ]
+                }
+            ]
+        },
+
+        "faqSection": {
+            "heading": "FAQs",
+            "items": [
+                {
+                    "step": "01",
+                    "title": "Is rooftop solar suitable in my area?",
+                    "description": "Yes. Your city receives sufficient solar irradiation, making rooftop solar systems highly effective."
+                },
+                {
+                    "step": "02",
+                    "title": "Can I get MNRE subsidy for rooftop solar?",
+                    "description": "Yes, subject to eligibility and current government policies. We assist with the full process."
+                },
+                 {
+                    "step": "03",
+                    "title": "How long does installation take?",
+                    "description": "Typically 7–15 days after approvals, depending on system size and site conditions."
+                }
+            ]
+        },
+        "aboutContent1": "is dedicated to accelerating India’s transition to clean and sustainable energy through reliable solar power solutions. Based in your city, we focus on delivering technically sound solar EPC projects with strict adherence to quality standards, safety norms, and long-term system performance.",
+        "aboutContent2": "We manage the complete lifecycle of solar projects—from feasibility study and system engineering to installation, grid synchronization, and ongoing maintenance. Our local execution capability combined with proven solar technology allows us to deliver consistent results for homes, businesses, and industrial facilities.",
+        "aboutContent3": "our installation practices align with manufacturer-recommended standards and industry best practices.",
+
         "theme": {
             "primary": "text-orange-500",
             "secondary": "text-yellow-600",
@@ -177,17 +253,18 @@
                 }
             ]
         },
-
         "faqSection": {
             "heading": "FAQs",
             "items": [
                 {
-                    "q": "Is rooftop solar suitable for homes in Indore?",
-                    "a": "Yes. Indore receives good solar irradiation, making rooftop solar highly effective."
+                    "step": "01",
+                    "title": "Is rooftop solar suitable for homes?",
+                    "description": "Yes. Most regions receive sufficient solar irradiation, making rooftop solar systems highly effective."
                 },
                 {
-                    "q": "Can I get MNRE subsidy?",
-                    "a": "Yes, subject to eligibility and government policy. We assist end-to-end."
+                    "step": "02",
+                    "title": "Can I get MNRE subsidy?",
+                    "description": "Yes, subject to eligibility and current government policies. We provide complete assistance throughout the subsidy process."
                 }
             ]
         },
@@ -207,7 +284,7 @@
             "text": "text-gray-900",
             "overlay": "bg-gradient-to-br from-rose-900/30 to-purple-900/30",
             "logoBg": "bg-gradient-to-r from-rose-400 to-purple-500 shadow-lg",
-            "navbarbgcolor": "bg-white backdrop-blur-md",
+            "navbarbgcolor": "bg-gray-200 backdrop-blur-md",
             "navbarcloseicon": "text-gray-800",
             "navmenubgcolor": "bg-white/95 backdrop-blur-md",
             "imagebgcolor": "bg-amber-50"

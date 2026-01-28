@@ -1,30 +1,24 @@
 import { useEffect } from "react";
-import {
-    FaEnvelope,
-    FaPhoneAlt,
-    FaMapMarkerAlt,
-    FaClock,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import companyThemes from "../config/companyThemes.json";
+import { useParams } from "react-router-dom";
 
 const Contact = () => {
+    const { company } = useParams();
+    const companyData = companyThemes[company];
+
     useEffect(() => {
         window.scrollTo(0, 0);
         AOS.init({ duration: 1000 });
     }, []);
 
+    const phone = companyData?.phone;
+    const email = companyData?.email;
+    const address = companyData?.location;
 
-
- 
-
-    const phone = companyThemes?.ArthTechSolution?.phone;
-    const email = companyThemes?.ArthTechSolution?.email;
-      const address = companyThemes?.ArthTechSolution?.location
-
-
-         // Google Maps link
+    // Google Maps link
     const mapLink = address
         ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               address,
@@ -58,7 +52,7 @@ const Contact = () => {
             content: address,
             link: mapLink,
         },
-    ].filter(Boolean); // 👈 removes empty items
+    ].filter(Boolean); // removes empty items
 
     return (
         <div className="relative w-full font-[Be_Vietnam_Pro] pt-20 overflow-hidden">
@@ -66,7 +60,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
                 {/* LEFT SIDE - Contact Information */}
                 <div
-                    className={`${companyThemes?.ArthTechSolution?.theme?.bg} ${companyThemes?.ArthTechSolution?.theme?.text} flex items-center justify-center p-6 sm:p-8 lg:p-12 xl:p-16 order-2 lg:order-1`}
+                    className={`${companyData?.theme?.bg} ${companyData?.theme?.text} flex items-center justify-center p-6 sm:p-8 lg:p-12 xl:p-16 order-2 lg:order-1`}
                     data-aos="fade-up"
                 >
                     <div className="max-w-2xl w-full space-y-8">
@@ -75,7 +69,7 @@ const Contact = () => {
                             <h1 className="text-4xl sm:text-5xl lg:text-4xl font-bold uppercase mb-4">
                                 Contact{" "}
                                 <span
-                                    className={`${companyThemes?.ArthTechSolution?.theme?.gradientText}`}
+                                    className={`${companyData?.theme?.gradientText}`}
                                 >
                                     Us
                                 </span>
@@ -91,15 +85,14 @@ const Contact = () => {
                             {contactInfo.map((item, index) => (
                                 <div
                                     key={index}
-                                    className={`${companyThemes?.ArthTechSolution?.theme?.bg} 
-      border border-gray-200 rounded-xl p-5 shadow-md 
-      hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                                    className={`${companyData?.theme?.bg} 
+                                    border border-gray-200 rounded-xl p-5 shadow-md 
+                                    hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
-                                  
                                     <div
-                                        className={`${companyThemes?.ArthTechSolution?.theme?.primary} mb-3`}
+                                        className={`${companyData?.theme?.primary} mb-3`}
                                     >
                                         {item.icon}
                                     </div>
@@ -111,9 +104,9 @@ const Contact = () => {
                                     <a
                                         href={item.link}
                                         className={`text-base lg:text-lg 
-        ${companyThemes?.ArthTechSolution?.theme?.text}
-        hover:${companyThemes?.ArthTechSolution?.theme?.primary}
-        transition-all break-all`}
+                                        ${companyData?.theme?.text}
+                                        hover:${companyData?.theme?.primary}
+                                        transition-all break-all`}
                                     >
                                         {item.content}
                                     </a>
@@ -123,10 +116,10 @@ const Contact = () => {
 
                         {/* CTA Section */}
                         <div
-                            className={` ${companyThemes?.ArthTechSolution?.theme?.bg} from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-lg p-6 mt-8`}
+                            className={`${companyData?.theme?.bg} from-orange-50 to-yellow-50 border-l-4 border-orange-500 rounded-lg p-6 mt-8`}
                         >
                             <h3
-                                className={`text-xl font-bold ${companyThemes?.ArthTechSolution?.theme?.gradientText} mb-2`}
+                                className={`text-xl font-bold ${companyData?.theme?.gradientText} mb-2`}
                             >
                                 Ready to Go Solar?
                             </h3>
@@ -136,7 +129,7 @@ const Contact = () => {
                                 property.
                             </p>
                             <a
-                                href={`tel:${companyThemes?.ArthTechSolution?.phone}`}
+                                href={`tel:${companyData?.phone}`}
                                 className="inline-block bg-gradient-to-r from-orange-500 to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
                             >
                                 Call Us Now
@@ -152,7 +145,7 @@ const Contact = () => {
                 >
                     {/* Background Image */}
                     <img
-                        src={companyThemes?.ArthTechSolution?.bgimg4}
+                        src={companyData?.bgimg4}
                         alt="Solar Panel"
                         className="w-full h-full object-cover"
                     />
@@ -163,12 +156,14 @@ const Contact = () => {
                         data-aos="fade-in"
                     >
                         <div
-                            className={`rounded-full overflow-hidden  p-4 sm:p-6 lg:p-8 shadow-2xl ${companyThemes?.ArthTechSolution?.theme?.imagebgcolor}`}
+                            className={`rounded-full overflow-hidden p-4 sm:p-6 lg:p-8 shadow-2xl ${
+                                companyData?.theme?.imagebgcolor ||
+                                "bg-white/10"
+                            } backdrop-blur-sm`}
                         >
                             <img
-                                src={companyThemes?.ArthTechSolution?.logo}
-                                alt={`${companyThemes?.ArthTechSolution?.name} Logo`}
-                                // className="w-32 h-32 sm:w-32 sm:h-36 lg:w-38 lg:h-38 object-contain rounded-full"
+                                src={companyData?.logo}
+                                alt={`${companyData?.name} Logo`}
                                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain rounded-full"
                             />
                         </div>
