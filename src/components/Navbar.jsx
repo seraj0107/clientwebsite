@@ -314,3 +314,13 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+//  "aboutContent1": "is dedicated to accelerating India’s transition to clean and sustainable energy through reliable solar power solutions. Based in your city, we focus on delivering technically sound solar EPC projects with strict adherence to quality standards, safety norms, and long-term system performance.",
+//         "aboutContent2": "We manage the complete lifecycle of solar projects—from feasibility study and system engineering to installation, grid synchronization, and ongoing maintenance. Our local execution capability combined with proven solar technology allows us to deliver consistent results for homes, businesses, and industrial facilities.",
+//         "aboutContent3": "our installation practices align with manufacturer-recommended standards and industry best practices.",

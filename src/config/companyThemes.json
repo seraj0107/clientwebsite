@@ -108,17 +108,30 @@
                     "title": "Can I get MNRE subsidy for rooftop solar?",
                     "description": "Yes, subject to eligibility and current government policies. We assist with the full process."
                 },
-                 {
+                {
                     "step": "03",
                     "title": "How long does installation take?",
                     "description": "Typically 7–15 days after approvals, depending on system size and site conditions."
                 }
             ]
         },
-        "aboutContent1": "is dedicated to accelerating India’s transition to clean and sustainable energy through reliable solar power solutions. Based in your city, we focus on delivering technically sound solar EPC projects with strict adherence to quality standards, safety norms, and long-term system performance.",
-        "aboutContent2": "We manage the complete lifecycle of solar projects—from feasibility study and system engineering to installation, grid synchronization, and ongoing maintenance. Our local execution capability combined with proven solar technology allows us to deliver consistent results for homes, businesses, and industrial facilities.",
-        "aboutContent3": "our installation practices align with manufacturer-recommended standards and industry best practices.",
-
+        "aboutSection": {
+            "heading": "About Us",
+            "paragraphs": [
+                "is dedicated to accelerating India’s transition to clean and sustainable energy through reliable solar power solutions. Based in your city, we focus on delivering technically sound solar EPC projects with strict adherence to quality standards, safety norms, and long-term system performance.",
+                "We manage the complete lifecycle of solar projects—from feasibility study and system engineering to installation, grid synchronization, and ongoing maintenance. Our local execution capability combined with proven solar technology allows us to deliver consistent results for homes, businesses, and industrial facilities.",
+                "Our installation practices align with manufacturer-recommended standards and industry best practices."
+            ],
+            "certifications": [
+                {
+                    "title": "Authorized Gautam Solar Tec Pro Dealer",
+                    "logo": "/certificates/gautam-solar-logo.png",
+                    "certificateImage": "/certificates/gautam-solar-certificate.png",
+                    "link": "https://gautamsolar.com/",
+                    "description": "Certified dealer providing genuine, ALMM-approved solar modules with assured quality and manufacturer-backed support."
+                }
+            ]
+        },
         "theme": {
             "primary": "text-orange-500",
             "secondary": "text-yellow-600",
@@ -268,9 +281,23 @@
                 }
             ]
         },
-        "aboutContent1": "is committed to supporting India’s transition to clean and sustainable energy through reliable rooftop solar solutions. Based in Indore, we focus on delivering technically sound solar EPC projects with strong emphasis on safety, quality execution, and long-term system performance",
-        "aboutContent2": "Our team manages the entire solar project lifecycle—starting from feasibility assessment and system design to installation, commissioning, and post-installation support. By combining local execution expertise with proven solar technology, we help homeowners, businesses, and industries reduce electricity costs and achieve energy independence",
-        "aboutContent3": "our installation practices align with manufacturer-recommended standards and industry best practices",
+        "aboutSection": {
+            "heading": "About Us",
+            "paragraphs": [
+                "is dedicated to accelerating India’s transition to clean and sustainable energy through reliable solar power solutions. Based in your city, we focus on delivering technically sound solar EPC projects with strict adherence to quality standards, safety norms, and long-term system performance.",
+                "We manage the complete lifecycle of solar projects—from feasibility study and system engineering to installation, grid synchronization, and ongoing maintenance. Our local execution capability combined with proven solar technology allows us to deliver consistent results for homes, businesses, and industrial facilities.",
+                "Our installation practices align with manufacturer-recommended standards and industry best practices."
+            ],
+            "certifications": [
+                {
+                    "title": "Authorized Gautam Solar Tec Pro Dealer",
+                    "logo": "/certificates/gautam-solar-logo.png",
+                    "certificateImage": "/certificates/gautam-solar-certificate.png",
+                    "link": "https://gautamsolar.com/",
+                    "description": "Certified dealer providing genuine, ALMM-approved solar modules with assured quality and manufacturer-backed support."
+                }
+            ]
+        },
         "bgimg1": "/arthimg/arttechimg1.jpg",
         "bgimg2": "/arthimg/arttechimg2.jpg",
         "bgimg3": "/arthimg/arttechimg3.jpg",
