@@ -4,9 +4,26 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import companyThemes from "../../config/companyThemes.json";
 
+const defaultCompnayData = {
+    name: "Gautam Solar",
+    logo: "",
+    email: "gautamsolar@gmail.com",
+    phone: "99999999999",
+    location: "Govind puri okhla",
+    bgimg1: "",
+    bgimg2: "",
+    bgimg3: "",
+    bgimg4: "",
+    bgimg5: "",
+    sectioncontent1:
+        "We are a locally based solar EPC service provider specializing in rooftop and ground-mounted solar power plant installations for residential, commercial, and industrial customers. We deliver complete end-to-end EPC services, including site assessment, system design, engineering, installation, commissioning, and long-term after-sales support across the region.",
+    sectioncontent2:
+        "As an authorized and certified solar dealer, we install ALMM-approved, high-efficiency solar modules designed to ensure long-term performance, safety, and dependable energy generation under Indian climatic conditions.",
+};
+
 const Section1 = () => {
-    const { company } = useParams(); 
-    const companyData = companyThemes[company]; 
+    const { company } = useParams();
+    const companyData = companyThemes[company];
 
     useEffect(() => {
         window.scrollTo(0, 0);
