@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
     FaHome,
     FaBuilding,
@@ -10,60 +11,104 @@ import {
     FaChevronRight,
     FaChevronDown,
     FaChevronUp,
-    FaEnvelope 
+    FaEnvelope,
 } from "react-icons/fa";
+
 import { TbLayoutNavbar } from "react-icons/tb";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Sidebar = ({ isOpen = true, onToggle }) => {
+    const { clientSlug } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
     const [sidebarOpen, setSidebarOpen] = useState(isOpen);
     const [homeDropdownOpen, setHomeDropdownOpen] = useState(false);
 
+    // const menuItems = [
+    //     {
+    //         icon: <TbLayoutNavbar />,
+    //         label: "Navbar Form",
+    //         path: "/admin/addcompany/adminnavbarform",
+    //     },
+    //     {
+    //         icon: <FaBuilding />,
+    //         label: "Home",
+    //         path: "/admin/addcompany/homesection",
+
+    //         hasDropdown: true,
+    //         subItems: [
+    //             {
+    //                 label: "Section Form 1",
+    //                 path: "/admin/addcompany/sectionform1",
+    //             },
+    //             { label: "Section Form 2", path: "/admin/addcompany/sectionform2" },
+    //         ],
+    //     },
+    //     {
+    //         icon: <FaPalette />,
+    //         label: "About Form",
+    //         path: "/admin/addcompany/aboutform",
+    //     },
+    //     {
+    //         icon: <FaUsers />,
+    //         label: "Contact Form",
+    //         path: "/admin/addcompany/contectform",
+    //     },
+    //     {
+    //         icon: <FaEnvelope />,
+    //         label: "Footer Form",
+    //         path: "/admin/addcompany/footerform",
+    //     },
+    //      {
+    //         icon: <FaEnvelope />,
+    //         label: "Submit",
+    //         path: "/admin/addcompany/daminmain",
+    //     },
+    // ];
+
     const menuItems = [
         {
             icon: <TbLayoutNavbar />,
             label: "Navbar Form",
-            path: "/admin/addcompany/adminnavbarform",
+            path: `/admin/addcompany/${clientSlug}/adminnavbarform`,
         },
         {
             icon: <FaBuilding />,
             label: "Home",
-            path: "/admin/addcompany/homesection",
-
             hasDropdown: true,
             subItems: [
                 {
                     label: "Section Form 1",
-                    path: "/admin/addcompany/sectionform1",
+                    path: `/admin/addcompany/${clientSlug}/sectionform1`,
                 },
-                { label: "Section Form 2", path: "/admin/addcompany/sectionform2" },
+                {
+                    label: "Section Form 2",
+                    path: `/admin/addcompany/${clientSlug}/sectionform2`,
+                },
             ],
         },
         {
             icon: <FaPalette />,
             label: "About Form",
-            path: "/admin/addcompany/aboutform",
+            path: `/admin/addcompany/${clientSlug}/aboutform`,
         },
         {
             icon: <FaUsers />,
             label: "Contact Form",
-            path: "/admin/addcompany/contectform",
+            path: `/admin/addcompany/${clientSlug}/contactform`,
         },
         {
             icon: <FaEnvelope />,
             label: "Footer Form",
-            path: "/admin/addcompany/footerform",
+            path: `/admin/addcompany/${clientSlug}/footerform`,
         },
-         {
+        {
             icon: <FaEnvelope />,
             label: "Submit",
-            path: "/admin/addcompany/footerform",
+            path: `/admin/addcompany/${clientSlug}/daminmain`,
         },
     ];
 
-    
     const handleToggle = () => {
         const newState = !sidebarOpen;
         setSidebarOpen(newState);
@@ -77,9 +122,11 @@ const Sidebar = ({ isOpen = true, onToggle }) => {
         navigate("/admin/login");
     };
 
-    const isActive = (path) => {
-        return location.pathname === path;
-    };
+    // const isActive = (path) => {
+    //     return location.pathname === path;
+    // };
+
+    const isActive = (path) => location.pathname.startsWith(path);
 
     return (
         <aside
