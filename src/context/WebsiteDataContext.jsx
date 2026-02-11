@@ -1,18 +1,20 @@
-// context/WebsiteDataContext.jsx
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
 
 const WebsiteDataContext = createContext();
 
 // Simple localStorage helpers
 const saveToLocal = (key, data) => {
     try {
-        localStorage.setItem(key, JSON.stringify({
-            data,
-            savedAt: new Date().toISOString()
-        }));
+        localStorage.setItem(
+            key,
+            JSON.stringify({
+                data,
+                savedAt: new Date().toISOString(),
+            }),
+        );
         return true;
     } catch (error) {
-        console.log('Save failed:', error);
+        console.log("Save failed:", error);
         return false;
     }
 };
@@ -22,12 +24,14 @@ const loadFromLocal = (key) => {
         const item = localStorage.getItem(key);
         return item ? JSON.parse(item).data : null;
     } catch (error) {
-        console.log('Load failed:', error);
+        console.log("Load failed:", error);
         return null;
     }
 };
 
 export const WebsiteDataProvider = ({ children, clientSlug }) => {
+    const [clientId, setClientId] = useState(loadFromLocal("clientId") || null);
+    // console.log("Initial Client ID from localStorage:", clientId);
     // Single state object for all sections
     const [websiteData, setWebsiteData] = useState({
         navbar: null,
@@ -41,17 +45,24 @@ export const WebsiteDataProvider = ({ children, clientSlug }) => {
     // Load all data on mount
     useEffect(() => {
         const loadAllData = () => {
-            const sections = ['navbar', 'section1', 'section2', 'about', 'contact', 'footer'];
+            const sections = [
+                "navbar",
+                "section1",
+                "section2",
+                "about",
+                "contact",
+                "footer",
+            ];
             const loadedData = {};
-            
-            sections.forEach(section => {
+
+            sections.forEach((section) => {
                 const data = loadFromLocal(`${section}_${clientSlug}`);
                 if (data) loadedData[section] = data;
             });
-            
-            setWebsiteData(prev => ({ ...prev, ...loadedData }));
+
+            setWebsiteData((prev) => ({ ...prev, ...loadedData }));
         };
-        
+
         loadAllData();
     }, [clientSlug]);
 
@@ -59,15 +70,22 @@ export const WebsiteDataProvider = ({ children, clientSlug }) => {
     const saveSectionData = (sectionName, data) => {
         const key = `${sectionName}_${clientSlug}`;
         const saved = saveToLocal(key, data);
-        
+
         if (saved) {
-            setWebsiteData(prev => ({
+            setWebsiteData((prev) => ({
                 ...prev,
-                [sectionName]: data
+                [sectionName]: data,
             }));
             return { success: true, message: `${sectionName} saved!` };
         }
-        return { success: false, message: 'Save failed' };
+        return { success: false, message: "Save failed" };
+    };
+
+    // saving client id in local storage;
+    const saveClientId = (id) => {
+        const key = "clientId";
+        saveToLocal(key, id);
+        setClientId(id);
     };
 
     // Get all data for preview/publish
@@ -82,13 +100,21 @@ export const WebsiteDataProvider = ({ children, clientSlug }) => {
 
     // Get section count
     const getSectionCount = () => {
-        return Object.values(websiteData).filter(data => data !== null).length;
+        return Object.values(websiteData).filter((data) => data !== null)
+            .length;
     };
 
     // Clear all data
     const clearAllData = () => {
-        const sections = ['navbar', 'section1', 'section2', 'about', 'contact', 'footer'];
-        sections.forEach(section => {
+        const sections = [
+            "navbar",
+            "section1",
+            "section2",
+            "about",
+            "contact",
+            "footer",
+        ];
+        sections.forEach((section) => {
             localStorage.removeItem(`${section}_${clientSlug}`);
         });
         setWebsiteData({
@@ -99,17 +125,22 @@ export const WebsiteDataProvider = ({ children, clientSlug }) => {
             contact: null,
             footer: null,
         });
+        setClientId(null);
     };
 
     return (
-        <WebsiteDataContext.Provider value={{
-            websiteData,
-            saveSectionData,
-            getAllData,
-            getSectionCount,
-            clearAllData,
-            clientSlug
-        }}>
+        <WebsiteDataContext.Provider
+            value={{
+                websiteData,
+                saveSectionData,
+                getAllData,
+                getSectionCount,
+                clearAllData,
+                clientId,
+                saveClientId,
+                clientSlug,
+            }}
+        >
             {children}
         </WebsiteDataContext.Provider>
     );
@@ -119,7 +150,9 @@ export const WebsiteDataProvider = ({ children, clientSlug }) => {
 export const useWebsiteData = () => {
     const context = useContext(WebsiteDataContext);
     if (!context) {
-        throw new Error('useWebsiteData must be used within WebsiteDataProvider');
+        throw new Error(
+            "useWebsiteData must be used within WebsiteDataProvider",
+        );
     }
     return context;
 };

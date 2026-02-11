@@ -104,7 +104,8 @@ import AboutForm from "./adminPanel/damindashbord/addcompany/compnayformdetails/
 import ContactForm from "./adminPanel/damindashbord/addcompany/compnayformdetails/ContactForm";
 import FooterForm from "./adminPanel/damindashbord/addcompany/compnayformdetails/FooterForm";
 import MasterControlPanel from "./components/services/MasterControlPanel";
-
+import CreateClient from "./adminPanel/damindashbord/addcompany/compnayformdetails/CreateClient";
+import ShowListOfClient from "./adminPanel/damindashbord/addcompany/compnayformdetails/ShowListOfClient";
 const ValidateCompany = () => {
     const { company } = useParams();
 
@@ -124,13 +125,15 @@ const ValidateCompany = () => {
     return <Layout />;
 };
 
-// Wrapper to get clientSlug from URL and provide context
 // URL format: /admin/addcompany/:clientSlug/adminnavbarform
 const AddCompanyWithContext = () => {
-    const { clientSlug } = useParams();
+    const { clientId } = useParams();
+
+    console.log("Client Slug from URL:", clientId);
 
     // Fallback to default if no clientSlug in URL
-    const slug = clientSlug || "man-hunt-co";
+    // const slug = clientSlug || "man-hunt-co";
+    const slug = clientId || "man-hunt-co";
 
     return (
         <WebsiteDataProvider clientSlug={slug}>
@@ -150,10 +153,11 @@ const App = () => {
                 />
                 <Route path="login" element={<AdminLogin />} />
                 <Route path="dashboard" element={<AdminDashboard />} />
-
-    
+                <Route path="createclient" element={<CreateClient />} />
+                <Route path="showclient" element={<ShowListOfClient />} />
                 <Route
-                    path="addcompany/:clientSlug"
+                    // path="addcompany/:clientSlug"
+                    path="addcompany/:clientId"
                     element={<AddCompanyWithContext />}
                 >
                     <Route
@@ -168,7 +172,6 @@ const App = () => {
                     <Route path="daminmain" element={<MasterControlPanel />} />
                 </Route>
 
-               
                 <Route
                     path="addcompany"
                     element={

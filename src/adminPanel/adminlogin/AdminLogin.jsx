@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { FaLock, FaUser, FaEye, FaEyeSlash, FaShieldAlt } from "react-icons/fa";
 import axios from "axios";
+
+
 const AdminLogin = () => {
+    
     const [formData, setFormData] = useState({
         userId: "",
         password: "",
@@ -60,7 +63,7 @@ const AdminLogin = () => {
             const { data } = await axios.post(`${baseURL}/user/login`, {
                 userId: formData.userId,
                 password: formData.password,
-            });
+            }, {withCredentials: true});
             console.log("Attempting login to:", `${baseURL}/user/login`);
 console.log("showing the data", data)
             localStorage.setItem("adminToken", data.token);

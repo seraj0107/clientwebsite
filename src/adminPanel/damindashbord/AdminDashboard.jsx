@@ -38,7 +38,7 @@ const AdminDashboard = () => {
         },
         {
             label: "Today's Views",
-            value: "245",
+            value: "20",
             icon: <FaChartBar className="w-8 h-8" />,
             gradient: "from-purple-500 to-purple-600",
             change: "+12% vs yesterday",
@@ -60,10 +60,24 @@ const AdminDashboard = () => {
 
     const quickActions = [
         {
-            title: "Add Company",
+            title: "Create Client",
             icon: <FaPlus />,
             color: "bg-blue-500",
-            action: () => navigate("/admin/addcompany"),
+            action: () => navigate("/admin/createclient"),
+        },
+        
+        // {
+        //     title: "Add Company",
+        //     icon: <FaPlus />,
+        //     color: "bg-blue-500",
+        //     action: () => navigate("/admin/addcompany"),
+        // },
+         {
+            title: "Show Client List",
+            icon: <FaUsers/>,
+            color: "bg-blue-500",
+            // action: () => navigate("/admin/addcompany"),
+            action: () => navigate("/admin/showclient"),
         },
         {
             title: "Edit Themes",
@@ -181,17 +195,6 @@ const AdminDashboard = () => {
 
             {/* Main Content */}
             <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-                {/* Welcome Section */}
-                <div className="mb-8">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                        Welcome back, Admin 👋
-                    </h2>
-                    <p className="text-gray-600">
-                        Here's what's happening with your solar companies today.
-                    </p>
-                </div>
-
-                {/* Stats Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                     {stats.map((stat, index) => (
                         <div

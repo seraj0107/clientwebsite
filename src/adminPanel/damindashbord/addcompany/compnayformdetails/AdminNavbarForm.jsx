@@ -1007,12 +1007,6 @@
 
 // export default AdminNavbarForm;
 
-
-
-
-
-
-
 import { useState, useEffect } from "react";
 import {
     FaUpload,
@@ -1074,6 +1068,7 @@ const AdminNavbarForm = () => {
     const [logoPreview, setLogoPreview] = useState("");
     const [loading, setLoading] = useState(false);
     const [saveStatus, setSaveStatus] = useState(null);
+    console.log("navbar form data", formData);
 
     // Icon mapping
     const iconMap = {
@@ -1115,38 +1110,16 @@ const AdminNavbarForm = () => {
     const handleChange = (key, value) => {
         setFormData({ ...formData, [key]: value });
     };
-
-    const handleLogoUpload = async (e) => {
+    const handleLogoUpload = (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
-        try {
-            const formDataUpload = new FormData();
-            formDataUpload.append("file", file);
+        // Preview image
+        const imageUrl = URL.createObjectURL(file);
+        setLogoPreview(imageUrl);
 
-            // Example API call
-            const res = await fetch("/api/upload-logo", {
-                method: "POST",
-                body: formDataUpload,
-            });
-
-            const data = await res.json();
-
-            if (data.url) {
-                setLogoPreview(data.url);
-                handleChange("logo", data.url);
-            }
-        } catch (error) {
-            console.error("Upload failed:", error);
-
-            // ✅ Fallback to base64 if upload fails
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setLogoPreview(reader.result);
-                handleChange("logo", reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
+        // Store file in form state
+        handleChange("logo", file);
     };
 
     const handleNavLinkChange = (index, field, value) => {
@@ -1923,9 +1896,3 @@ const AdminNavbarForm = () => {
 };
 
 export default AdminNavbarForm;
-
-
-
-
-
-
